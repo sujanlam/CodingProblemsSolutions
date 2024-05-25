@@ -10,10 +10,10 @@ public class FindMinMaxNumber {
         List<Integer> numbers = Arrays.asList(10,12,5,7,19,0,1,211);
 
         int max = numbers.stream().max(Comparator.naturalOrder()).get();
-        System.out.println("Max num: " +max);
+        System.out.println("Maximum number: " +max);
 
         int min = numbers.stream().min(Comparator.naturalOrder()).get();
-        System.out.println("Min num: "+min);
+        System.out.println("Minimum number: "+min);
     }
 
 }
