@@ -9,7 +9,16 @@ import java.util.stream.Collectors;
 public class FindSecondlargestNumber {
     public static void main(String[] args) {
         List<Integer> numbers = Arrays.asList(10,12,5,7,19,0,1,211);
-
+        numbers.forEach(System.out::print);
+        System.out.println();
+        //Ascending Order
+        List<Integer> sortedNumsAsc = numbers.stream().sorted().collect(Collectors.toList());
+        sortedNumsAsc.forEach(System.out::print);
+        System.out.println();
+        //Descending Irder
+        List<Integer> sortedNumsDesc = numbers.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+        sortedNumsDesc.forEach(System.out::print);
+        System.out.println();
         int secondlargest = numbers.stream().sorted(Comparator.reverseOrder()).skip(1).findFirst().get();
         System.out.println(secondlargest);
     }
